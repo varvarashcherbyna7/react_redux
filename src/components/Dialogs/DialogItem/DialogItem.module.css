@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Merienda&display=swap');
+
+.dialog {
+    padding: 10px;
+    text-align: center;
+}
+.dialog  a.active {
+    color: #01b9f9;
+    /*text-shadow: 1px 1px 2px #939498, 1px 1px 2em #025EAB; */
+}
+.ava {
+    width: 60px;
+    padding-left: 5px;
+}
+.person {
+    color: #939498;
+    text-decoration: none;
+    font-family: 'Merienda', cursive;
+}

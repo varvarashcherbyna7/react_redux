@@ -1,0 +1,27 @@
+
+.friendsDiv {
+    margin: 0 auto;
+    padding-left: 13px;
+    font-size: 16px;
+}
+.friendsDiv a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+}
+.person {
+    color: #F8F8F6;
+}
+.friendsDiv a.active {
+    color: #025EAB;
+}
+.personContainer {
+    text-align: center;
+}
+.ava {
+    width: 60px;
+    border-radius: 50%;
+}
+.avaName {
+
+}

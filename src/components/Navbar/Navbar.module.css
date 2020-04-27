@@ -1,12 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Lora|Merienda&display=swap');
 .nav {
     grid-area: n;
     background-color: #C3C4C8;
     padding-left: 20px;
+    font-family: 'Lora', serif;
+    font-weight: bold;
+    font-size: larger;
+    letter-spacing: 1px;
+}
+.item {
+    padding: 13px;
 }
 .item a {
     color: #F8F8F6;
     text-decoration: none;
 }
 .item a.active {
-    color: #025EAB
+    color: #025EAB;
+    padding-left: 10px;
+    text-shadow: 1px 1px 2px #C3C4C8, 0 0 1em #01b9f9; /* Параметры тени */
+    /*font-size: 2em; !* Размер надписи *!*/
 }
+.friends {
+    text-align: center;
+    color: #025EAB;
+    font-weight: bold;
+    padding-top: 25px;
+    letter-spacing: 4px;
+}
+.friendsDiv {
+    display: flex;
+    padding-right: 25px;
+    padding-bottom: 25px;
+}
+

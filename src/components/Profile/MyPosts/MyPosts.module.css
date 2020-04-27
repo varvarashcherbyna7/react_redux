@@ -1,9 +1,6 @@
-/*.item {*/
-/*    color: #939498;*/
-/*}*/
-/*.item.active {*/
-/*    color: #01b9f9;*/
-/*}*/
-/*.item img {*/
-/*    width: 60px;*/
-/*}*/
+.postsBlock {
+    padding: 10px;
+}
+.posts {
+    margin-top: 10px;
+}
