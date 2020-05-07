@@ -3,25 +3,34 @@ import s from './Dialogs.module.css';
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 
-const Dialogs = (props: {   state: any,
-                            // newMessageText: any,
-                            addMessage: any,
-                            updateNewMessageText: any }) => {
+const Dialogs = (props: {
+    dialogs: any;
+    messages: any;
+    newMessageText: any;
+    addMessage: any;
+    onMessageChange: any;
+}) => {
 
-    let dialogsElements = props.state.dialogPage.dialogs.map((d: { name: React.ReactNode; id: React.ReactNode; ava: any }) =>
-        <DialogItem name={d.name} id={d.id} ava={d.ava}/>);
-    let messagesElements = props.state.dialogPage.messages.map((m: { message: React.ReactNode; }) =>
-        <Message message={m.message}/>);
+    let dialogsElements = props.dialogs
+        .map((d: { name: React.ReactNode; id: React.ReactNode; ava: any }) =>
+            // @ts-ignore
+        <DialogItem name={d.name} ava={d.ava} id={d.id} key={d.id}/>);
+    let messagesElements = props.messages
+        .map((m: { message: React.ReactNode; id: React.ReactNode}) =>
+            // @ts-ignore
+        <Message message={m.message} id={m.id} key={m.id}/>);
 
-    let newPostElement = React.createRef();
+    // let newPostElement = React.createRef();
+    let newMessage = props.newMessageText;
 
-    let addPost = () => {
+    let onClickAddMessage = () => {
         props.addMessage();
     };
-    let onPostChange = () => {
+    let onMessageChange = (e: { target: { value: any; }; }) => {
         // @ts-ignore
-        let text = newPostElement.current.value;
-        props.updateNewMessageText(text);
+        // let text = newPostElement.current.value;
+        let text = e.target.value;
+        props.onMessageChange(text)
     }
 
     return (
@@ -33,14 +42,14 @@ const Dialogs = (props: {   state: any,
                 {messagesElements}
 
                 <div>
-                    <div>
-                        // @ts-ignore
-                        <textarea ref={newPostElement}
-                                  onChange={onPostChange}
-                                  value={props.state.dialogPage.newMessageText} />
+                    <div className={s.textareaDiv}>
+                        <textarea value={newMessage} onChange={onMessageChange} placeholder='Enter your message'
+                                  // @ts-ignore
+                                  //  ref={newPostElement}
+                        />
                     </div>
                     <div>
-                        <button onClick={addPost}>
+                        <button onClick={onClickAddMessage}>
                             Add posts
                         </button>
                     </div>

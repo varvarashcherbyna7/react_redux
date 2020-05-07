@@ -2,11 +2,15 @@ import React from 'react';
 import s from './Navbar.module.css';
 import {NavLink} from "react-router-dom";
 import Friends from "./Friends/Friends";
+import store from "../../redux/store";
 
-const Navbar = (props:  any) => {
+const Navbar = () => {
 
-    let friendsElements = props.state.sideBar.friends.map((f: { name: any; id: any; ava: any; }) =>
-        <Friends id={f.id} name={f.name} ava={f.ava}/>);
+    let state = store.getState();
+
+    let friendsElements = state.sideBar.friends
+        .map((f: { id: any; name: any;  ava: any; }) => <Friends key={f.id} name={f.name} ava={f.ava} id={f.id}/>);
+
     return (
         <nav className={s.nav}>
             <div className={s.item}>

@@ -18,8 +18,7 @@
 .item a.active {
     color: #025EAB;
     padding-left: 10px;
-    text-shadow: 1px 1px 2px #C3C4C8, 0 0 1em #01b9f9; /* Параметры тени */
-    /*font-size: 2em; !* Размер надписи *!*/
+    text-shadow: 1px 1px 2px #C3C4C8, 0 0 1em #01b9f9;
 }
 .friends {
     text-align: center;
