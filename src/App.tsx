@@ -8,24 +8,29 @@ import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
+import UsersContainer from "./components/FindUsers/UsersContainer";
+import ProfileContainer from "./components/Profile/ProfileContainer";
 // import Footer from "./components/Footer/Footer";
 
 const App = () => {
+
     return (
         <div className="app-wrapper">
             <Header/>
-            <Navbar
-                // state={props.state}
-            />
+            <Navbar/>
             <div className="app-wrapper-content">
+                // @ts-ignore
                 <Route path='/dialogs' render={() => (< DialogsContainer/>)}/>
-                <Route path='/profile' render={() => (<Profile/>)}/>
-                <Route path='/news'
-                       render={() => (<News/>)}/>
-                <Route path='/music'
-                       render={() => (<Music/>)}/>
-                <Route path='/settings'
-                       render={() => (<Settings/>)}/>
+                // @ts-ignore
+                <Route path='/profile/:userId' render={() => (<ProfileContainer/>)}/>
+                // @ts-ignore
+                <Route path='/news' render={() => (<News/>)}/>
+                // @ts-ignore
+                <Route path='/music' render={() => (<Music/>)}/>
+                // @ts-ignore
+                <Route path='/settings' render={() => (<Settings/>)}/>
+                // @ts-ignore
+                <Route path='/findUsers' render={() => (<UsersContainer/>)}/>
             </div>
             {/*<Footer/>*/}
         </div>

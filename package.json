@@ -1,5 +1,5 @@
 {
-  "name": "untitled",
+  "name": "react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,6 +10,8 @@
     "@types/node": "^12.12.34",
     "@types/react-dom": "^16.9.6",
     "@types/react-router-dom": "^5.1.4",
+    "classnames": "^2.2.6",
+    "express": "^4.17.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -43,6 +45,19 @@
   },
   "devDependencies": {
     "@types/react": "^16.9.34",
+    "axios": "^0.19.2",
     "flow-bin": "^0.122.0"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/varvarashcherbyna7/react_redux.git"
+  },
+  "author": "Varvara Shcherbyna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/varvarashcherbyna7/react_redux/issues"
+  },
+  "homepage": "https://localhost:3000"
 }

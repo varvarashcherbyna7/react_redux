@@ -1,0 +1,47 @@
+.socialNetworksContainer {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 5%;
+    right: 4%;
+}
+
+.socialNetworksContainer a {
+    padding: 1%;
+    font-size: medium;
+    width: 6%;
+}
+.socialNetworksDiv  {
+
+}
+
+.containerJobDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2%;
+    position: absolute;
+    top: 1%;
+    left: 2%;
+}
+
+.containerJobDescription div {
+    padding: 2%;
+}
+
+.jobDiv {
+    width: 20%;
+    padding: 2%;
+}
+.jobDiv img {
+    text-align: center;
+    width: 100%;
+}
+
+.descriptionDiv {
+
+}
+
+.postDiv {
+
+}

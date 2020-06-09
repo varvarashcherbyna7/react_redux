@@ -1,3 +1,93 @@
-.descriptionBlock {
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+}
+
+.containerAva {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+}
+
+.bgImg {
     padding: 10px;
+}
+
+.bgImg img {
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.avaDiv {
+    position: absolute;
+    text-align: center;
+    width: 30%;
+    top: 23%;
+    left: 35%;
+}
+
+.avaDiv img {
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.nameDiv {
+    font-size: larger;
+    padding-bottom: 4px;
+    text-transform: capitalize;
+}
+
+.aboutMeDiv {
+
+}
+
+.socialNetworksContainer {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 5%;
+    right: 4%;
+}
+
+.socialNetworksContainer a {
+    padding: 1%;
+    font-size: medium;
+    width: 6%;
+}
+.socialNetworksDiv  {
+
+}
+
+.containerJobDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2%;
+    position: absolute;
+    top: 1%;
+    left: 2%;
+}
+
+.containerJobDescription div {
+    padding: 2%;
+}
+
+.jobDiv {
+    width: 20%;
+    padding: 2%;
+}
+.jobDiv img {
+    text-align: center;
+    width: 100%;
+}
+
+.descriptionDiv {
+
+}
+
+.postDiv {
+    margin-top: 10%;
 }

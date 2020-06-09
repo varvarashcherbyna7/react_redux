@@ -5,7 +5,6 @@ import Post from "./Post/Post";
 const MyPosts = (props: {
     posts: any, newPostText: any, addPost: any, updateNewPostText: any }) => {
 
-
     let postsElement = props.posts
         .map((p: {
             id: React.ReactNode;
@@ -14,14 +13,11 @@ const MyPosts = (props: {
             // @ts-ignore
             <Post id={p.id} key={p.id} message={p.message} likesCount={p.likesCount}/>);
 
-    let newPostElement = React.createRef();
-
     let onAddPost = () => {
         props.addPost();
     };
-    let onPostChange = () => {
-        // @ts-ignore
-        let text = newPostElement.current.value;
+    let onPostChange = (e: { target: { value: any; }; }) => {
+        let text = e.target.value;
         props.updateNewPostText(text);
     };
 
@@ -31,10 +27,10 @@ const MyPosts = (props: {
             <div>
                 <div>
                         <textarea
-                            // @ts-ignore
-                            ref={newPostElement}
+                            value={props.newPostText}
                             onChange={onPostChange}
-                            value={props.newPostText}/>
+                            placeholder='Enter your text'
+                        />
                 </div>
                 <div>
                     <button onClick={onAddPost}>Add posts</button>

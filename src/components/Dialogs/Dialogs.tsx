@@ -30,7 +30,7 @@ const Dialogs = (props: {
         // @ts-ignore
         // let text = newPostElement.current.value;
         let text = e.target.value;
-        props.onMessageChange(text)
+        props.onMessageChange(text);
     }
 
     return (
@@ -43,7 +43,10 @@ const Dialogs = (props: {
 
                 <div>
                     <div className={s.textareaDiv}>
-                        <textarea value={newMessage} onChange={onMessageChange} placeholder='Enter your message'
+                        <textarea
+                            value={newMessage}
+                            onChange={onMessageChange}
+                            placeholder='Enter your message'
                                   // @ts-ignore
                                   //  ref={newPostElement}
                         />
